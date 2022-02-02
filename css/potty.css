@@ -1,0 +1,163 @@
+/* Fonts */
+
+@font-face {
+    font-family: "roboto-medium";
+    src: url("/assets/fonts/Roboto/Roboto-Medium.ttf") format("ttf")
+}
+@font-face {
+    font-family: "roboto-regular";
+    src: url("/assets/fonts/Roboto/Roboto-Regular.ttf") format("ttf")
+  }
+
+/* Global */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2E20CA;
+}
+
+body {
+    font-family: "roboto-regular";
+    padding: 0;
+    margin: 0 auto;
+}
+
+.block {
+    display: block !important;
+}
+
+h1, h2, p, a {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h1 {
+    font-family: "roboto-medium";
+    font-weight: 500;
+    font-size: 3.5em;
+}
+
+h2 {
+    font-family: "roboto-medium";
+    font-weight: 500;
+    font-size: 2em;
+}
+
+header, main {
+    width: 100%;
+    position: relative;
+}
+
+.pottypage {
+    color: #2E20CA;
+}
+
+/* Headerbutton */
+
+.pottypage main {
+    position: relative;
+}
+
+.pottypage main > a:nth-child(1) {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    text-decoration: none;
+    color: #2E20CA;
+    transition: 1s;
+}
+
+.pottypage main > a:nth-child(1)::before {
+    content: '👈';
+    margin-right: .2em;
+    font-size: 2em;
+    transition: .3s;
+}
+
+.pottypage main > a:nth-child(1):hover::before {
+    transform: translateX(-.3em);
+}
+
+.pottypage main header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #FDF7FF;
+}
+
+.pottypage main header > section p {
+    width: 90%;
+    font-size: 1rem;
+}
+
+.pottypage main > section,
+.pottypage main > section > article {
+    display: flex;
+}
+
+.pottypage main > section {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.pottypage main > section > article {
+    justify-content: center;
+}
+
+.pottypage main > section > article p {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.pottypage main > section > figure,
+.pottypage main > section > article {
+    margin: 0;
+    flex: 50%;
+}
+
+.pottypage main > section > figure img {
+    width: 100%;
+    font-size: 1rem;
+}
+
+.pottypage main > section:last-of-type > article {
+    text-align: center;
+    flex-direction: column;
+}
+
+.pottypage main > section:last-of-type > article p {
+    margin-bottom: .5em;
+}
+
+@media (min-width: 40em) { 
+
+    /* Global */
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 70em) { 
+
+    /* Global */
+
+    h1 {
+        font-size: 4em;
+    }
+    
+    h2 {
+        font-size: 2.5em;
+    }
+}

@@ -1,0 +1,29 @@
+/* Keyframes */
+
+@keyframes letterFadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+.landingpage header section h1 {
+  animation: letterFadein 1.5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.landingpage header section h2 {
+  animation: letterFadein 1.5s ease-in;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+.landingpage header section p,
+.landingpage header section .button {
+  animation: letterFadein 1.5s ease-in;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+}
