@@ -17,13 +17,13 @@
 
 .landingpage header section h2 {
   animation: letterFadein 1.5s ease-in;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
 }
 
 .landingpage header section p,
 .landingpage header section .button {
   animation: letterFadein 1.5s ease-in;
-  animation-delay: 6s;
+  animation-delay: 4s;
   animation-fill-mode: forwards;
 }
