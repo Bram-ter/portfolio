@@ -1,0 +1,141 @@
+/* Fonts */
+
+@font-face {
+    font-family: "roboto-medium";
+    src: url("/assets/fonts/Roboto/Roboto-Medium.ttf") format("ttf")
+}
+@font-face {
+    font-family: "roboto-regular";
+    src: url("/assets/fonts/Roboto/Roboto-Regular.ttf") format("ttf")
+  }
+
+/* Global */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2E20CA;
+}
+
+body {
+    font-family: "roboto-regular";
+    padding: 0;
+    margin: 0 auto;
+}
+
+.block {
+    display: block !important;
+}
+
+h1, h2, p, a {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h1 {
+    font-family: "roboto-medium";
+    font-weight: 500;
+    font-size: 3.5em;
+}
+
+h2 {
+    font-family: "roboto-medium";
+    font-weight: 500;
+    font-size: 2em;
+}
+
+header, main {
+    width: 100%;
+    position: relative;
+}
+
+.fed-page {
+    color: #2E20CA;
+}
+
+/* Headerbutton */
+
+.fed-page main {
+    position: relative;
+}
+
+.fed-page main > a:nth-child(1) {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    text-decoration: none;
+    color: #2E20CA;
+    transition: 1s;
+}
+
+.fed-page main > a:nth-child(1)::before {
+    content: '👈';
+    margin-right: .2em;
+    font-size: 2em;
+    transition: .3s;
+}
+
+.fed-page main > a:nth-child(1):hover::before {
+    transform: translateX(-.3em);
+}
+
+.fed-page main header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #FDF7FF;
+}
+
+.fed-page main header > section {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.fed-page main header > section p {
+    width: 90%;
+    font-size: 1rem;
+}
+
+@media (min-width: 40em) { 
+
+    /* Global */
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 70em) { 
+
+    /* Global */
+
+    h1 {
+        font-size: 4em;
+    }
+    
+    h2 {
+        font-size: 2.5em;
+    }
+
+    .fed-page main header > section {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .fed-page main header > section p {
+        margin: 0 auto;
+    }
+}
