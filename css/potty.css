@@ -92,6 +92,11 @@ header, main {
     background-color: #FDF7FF;
 }
 
+.pottypage main header > section {
+    margin: 0 auto;
+    width: 80%;
+}
+
 .pottypage main header > section p {
     width: 90%;
     font-size: 1rem;
@@ -103,17 +108,37 @@ header, main {
 }
 
 .pottypage main > section {
-    margin-top: 5em;
-    margin-bottom: 5em;
+    flex-direction: column;
 }
 
 .pottypage main > section > article {
-    justify-content: center;
+    position: relative;
+    flex-direction: column;
 }
 
-.pottypage main > section > article p {
+.pottypage main > section > article p,
+.pottypage main > section > article a {
     margin: 0 auto;
+    margin-top: 2em;
     width: 80%;
+}
+
+.pottypage main > section > article a {
+    margin-top: 1em;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+.pottypage main > section > article > a::after {
+    position: absolute;
+    content: '👉';
+    line-height: 1.5;
+    margin-left: .2em;
+    transition: .3s;
+}
+
+.pottypage main > section > article > a:hover::after {
+    transform: translateX(.3em);
 }
 
 .pottypage main > section > figure,
@@ -124,16 +149,13 @@ header, main {
 
 .pottypage main > section > figure img {
     width: 100%;
+    display: block;
     font-size: 1rem;
+    margin-top: 2em;
 }
 
-.pottypage main > section:last-of-type > article {
-    text-align: center;
-    flex-direction: column;
-}
-
-.pottypage main > section:last-of-type > article p {
-    margin-bottom: .5em;
+.pottypage main > section:last-of-type img {
+    width: 100%;
 }
 
 @media (min-width: 40em) { 
@@ -159,5 +181,31 @@ header, main {
     
     h2 {
         font-size: 2.5em;
+    }
+
+    .pottypage main header > section {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .pottypage main header > section p {
+        margin: 0 auto;
+    }
+
+    .pottypage main > section {
+        margin-top: 5em;
+        margin-bottom: 5em;
+        flex-direction: row;
+    }
+
+    .pottypage main > section > figure img {
+        margin-top: 0em;
+    }
+
+    .pottypage main > section:last-of-type img {
+        width: 50%;
     }
 }
