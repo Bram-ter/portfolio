@@ -98,7 +98,7 @@ header, main {
 }
 
 .fed-page main header > section p {
-    width: 90%;
+    width: 80%;
     font-size: 1rem;
 }
 
@@ -119,8 +119,18 @@ header, main {
 .fed-page main > section > article p,
 .fed-page main > section > article a {
     margin: 0 auto;
-    margin-top: 2em;
+    margin-top: 1em;
     width: 80%;
+}
+
+.fed-page main > section > article ul {
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 80%;
+}
+
+.fed-page main > section > article ul > li:not(:first-of-type) {
+    margin-top: .5em;
 }
 
 .fed-page main > section > article a {
@@ -163,6 +173,41 @@ header, main {
     width: 100%;
 }
 
+.fed-page main > section:last-of-type p {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.fed-page main > section:last-of-type a {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.fed-page main > section:last-of-type a {
+    margin-top: 1em;
+}
+
+.fed-page main > section:last-of-type a::after {
+    position: absolute;
+    content: '👉';
+    line-height: 1.5;
+    margin-left: .2em;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.fed-page main > section:last-of-type a:hover::after {
+    transform: translateX(.3em);
+}
+
+.fed-page main > section:last-of-type div:nth-child(2) {
+    flex-direction: column;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
 @media (min-width: 40em) { 
 
     /* Global */
@@ -173,6 +218,15 @@ header, main {
 
     h2 {
         font-size: 2em;
+    }
+
+    .fed-page main > section:last-of-type div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .fed-page main > section:last-of-type img {
+        width: 80%;
     }
 }
 
@@ -196,9 +250,20 @@ header, main {
         width: 100%;
     }
 
+    .fed-page main header > section h1,
+    .fed-page main header > section p  {
+        width: 40%;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .fed-page main header > section p {
+        font-size: 1rem;
+    }
+
     .fed-page main > section {
         margin-top: 5em;
-        margin-bottom: 5em;
+        margin-bottom: em;
         flex-direction: row;
     }
 
@@ -206,15 +271,21 @@ header, main {
         margin-top: 0;
     }
 
-    .fed-page main header > section p {
-        margin: 0 auto;
-    }
-
-    .fed-page main > section:last-of-type img {
-        width: 33%;
+    .fed-page main > section:last-of-type div img {
+        width: 100%;
     }
 
     .fed-page main > section:last-of-type p {
-        width: 33%;
+        margin-left: .5em;
+        margin-top: .5em;
+    }
+
+    .fed-page main > section:last-of-type a {
+        width: 97%;
+        margin: 0 auto;
+    }
+
+    .fed-page main > section:last-of-type div:nth-child(2) {
+        justify-content: flex-start;
     }
 }

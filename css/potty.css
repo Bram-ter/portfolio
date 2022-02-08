@@ -125,8 +125,6 @@ header, main {
 
 .pottypage main > section > article a {
     margin-top: 1em;
-    font-size: 1.1em;
-    text-decoration: none;
 }
 
 .pottypage main > section > article > a::after {
@@ -135,6 +133,7 @@ header, main {
     line-height: 1.5;
     margin-left: .2em;
     transition: .3s;
+    text-decoration: none;
 }
 
 .pottypage main > section > article > a:hover::after {
