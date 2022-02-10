@@ -51,17 +51,17 @@ header, main {
     position: relative;
 }
 
-.pottypage {
+.rmddpage {
     color: #2E20CA;
 }
 
 /* Headerbutton */
 
-.pottypage main {
+.rmddpage main {
     position: relative;
 }
 
-.pottypage main > a:nth-child(1) {
+.rmddpage main > a:nth-child(1) {
     z-index: 1;
     display: flex;
     align-items: center;
@@ -73,18 +73,18 @@ header, main {
     transition: 1s;
 }
 
-.pottypage main > a:nth-child(1)::before {
+.rmddpage main > a:nth-child(1)::before {
     content: '👈';
     margin-right: .2em;
     font-size: 2em;
     transition: .3s;
 }
 
-.pottypage main > a:nth-child(1):hover::before {
+.rmddpage main > a:nth-child(1):hover::before {
     transform: translateX(-.3em);
 }
 
-.pottypage main header {
+.rmddpage main header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,69 +92,67 @@ header, main {
     background-color: #FDF7FF;
 }
 
-.pottypage main header > section {
+.rmddpage main header > section {
     margin: 0 auto;
     width: 80%;
 }
 
-.pottypage main header > section p {
+.rmddpage main header > section p {
     width: 90%;
     font-size: 1rem;
 }
 
-.pottypage main > section,
-.pottypage main > section > article {
+.rmddpage main > section {
     display: flex;
 }
 
-.pottypage main > section {
-    flex-direction: column;
-}
-
-.pottypage main > section > article {
-    position: relative;
-    flex-direction: column;
-}
-
-.pottypage main > section > article p,
-.pottypage main > section > article a {
-    margin: 0 auto;
-    margin-top: 2em;
-    width: 80%;
-}
-
-.pottypage main > section > article a {
-    margin-top: 1em;
-}
-
-.pottypage main > section > article > a::after {
-    position: absolute;
-    content: '👉';
-    line-height: 1.5;
-    margin-left: .2em;
-    transition: .3s;
-    text-decoration: none;
-}
-
-.pottypage main > section > article > a:hover::after {
-    transform: translateX(.3em);
-}
-
-.pottypage main > section > figure,
-.pottypage main > section > article {
+.rmddpage main > section > figure,
+.rmddpage main > section > article {
     margin: 0;
     flex: 50%;
 }
 
-.pottypage main > section > figure img {
+.rmddpage main > section > article p:first-child {
+    margin-top: 5em;
+}
+
+.rmddpage main > section > article p {
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 80%;
+}
+
+.rmddpage main > section > article blockquote {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 75%;
+}
+
+.rmddpage main > section > article blockquote::before,
+.rmddpage main > section > article blockquote::after {
+    position: absolute;
+    content: '\0022	';
+    font-size: 3em;
+    color: #2E20CA;
+}
+
+.rmddpage main > section > article blockquote::before {
+    top: -.2em;
+    left: -.5em;
+}
+
+.rmddpage main > section > article blockquote::after {
+    bottom: -.7em;
+    margin-left: .1em;
+}
+
+.rmddpage main > section > figure img {
     width: 100%;
     display: block;
     font-size: 1rem;
     margin-top: 2em;
-}
-
-.pottypage main > section:last-of-type img {
-    width: 100%;
+    box-shadow: #d8d8d8 1px 1px 1px 1px;
 }
 
 @media (min-width: 40em) { 
@@ -182,7 +180,7 @@ header, main {
         font-size: 2.5em;
     }
 
-    .pottypage main header > section {
+    .rmddpage main header > section {
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -190,21 +188,10 @@ header, main {
         width: 100%;
     }
 
-    .pottypage main header > section p {
+    .rmddpage main header > section h1,
+    .rmddpage main header > section p {
+        width: 40%;
         margin: 0 auto;
-    }
-
-    .pottypage main > section {
-        margin-top: 5em;
-        margin-bottom: 5em;
-        flex-direction: row;
-    }
-
-    .pottypage main > section > figure img {
-        margin-top: 0em;
-    }
-
-    .pottypage main > section:last-of-type img {
-        width: 50%;
+        text-align: left;
     }
 }
