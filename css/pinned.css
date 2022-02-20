@@ -9,7 +9,30 @@
     src: url("/assets/fonts/Roboto/Roboto-Regular.ttf") format("ttf")
   }
 
+/* Keyframes */
+
+@keyframes ballSlideDown {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 /* global */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: "roboto-regular";
@@ -76,9 +99,48 @@ header, main {
 
 .pinnedpage div:nth-child(2) {
     display: flex;
+    position: relative;
 }
 
-.pinnedpage div:nth-child(2) > article {
+.pinnedpage div:nth-child(2) > a {
+    width: auto;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    text-decoration: none;
+}
+
+.pinnedpage div:nth-child(2) > a > span {
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    width: 30px;
+    height: 50px;
+    bottom: 2em;
+    border: 2px solid #2E20CA;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+
+.pinnedpage div:nth-child(2) > a > span::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    bottom: 2em;
+    margin-left: -.2em;
+    background-color: #2E20CA;
+    border-radius: 100%;
+    animation: ballSlideDown 2s infinite;
+    box-sizing: border-box;
+}
+
+.pinnedpage div:nth-child(2) > a:visited {
+    color: #2E20CA;
+}
+
+.pinnedpage div:nth-child(2) > header {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -87,7 +149,7 @@ header, main {
     background-color: #FDF7FF;
 }
 
-.pinnedpage div:nth-child(2) > article div {
+.pinnedpage div:nth-child(2) > header div {
     align-self: flex-start;
     width: 90%;
     flex-direction: column;
@@ -97,7 +159,7 @@ header, main {
     order: 1;
 }
 
-.pinnedpage div:nth-child(2) > article img {
+.pinnedpage div:nth-child(2) > header img {
     align-self: flex-start;
     width: 20em;
     height: auto;
@@ -105,13 +167,13 @@ header, main {
     margin-top: 5em;
 }
 
-.pinnedpage div:nth-child(2) > article div h1 {
+.pinnedpage div:nth-child(2) > header div h1 {
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
     width: 100%;
 }
 
-.pinnedpage div:nth-child(2) > article p {
+.pinnedpage div:nth-child(2) > header p {
     width: 100%;
 }
 
@@ -544,18 +606,18 @@ header, main {
         height: 100vh;
     }
     
-    .pinnedpage div:nth-child(2) > article {
+    .pinnedpage div:nth-child(2) > header {
         flex-direction: row;
     }
     
-    .pinnedpage div:nth-child(2) > article div {
+    .pinnedpage div:nth-child(2) > header div {
         align-self: center;
         width: 50%;
         margin-bottom: 0em;
         order: 0;
     }
     
-    .pinnedpage div:nth-child(2) > article img {
+    .pinnedpage div:nth-child(2) > header img {
         align-self: center;
         margin-top: 1em;
     }
@@ -709,7 +771,7 @@ header, main {
     }
     
     .pinnedpage div:nth-child(7) > article:nth-child(2) figure img {
-        width: 100%;
+        width: 80%;
     } 
     
     /* div 7 */
@@ -802,16 +864,16 @@ header, main {
         font-size: 1.2rem;
     }
 
-    .pinnedpage div:nth-child(2) > article p,
-    .pinnedpage div:nth-child(2) > article div h1 {
+    .pinnedpage div:nth-child(2) > header p,
+    .pinnedpage div:nth-child(2) > header div h1 {
         width: 80%;
     }
 
-    .pinnedpage div:nth-child(2) > article div {
+    .pinnedpage div:nth-child(2) > header div {
         margin-left: 5em;
     }
 
-    .pinnedpage div:nth-child(2) > article img {
+    .pinnedpage div:nth-child(2) > header img {
         width: 40em;
         margin-right: 5em;
     }
@@ -847,7 +909,7 @@ header, main {
     }
 
     .pinnedpage div:nth-child(7) > article:nth-child(2) figure img {
-        width: 70%;
+        width: 60%;
     }
 
     .pinnedpage div:nth-child(9) > article:nth-child(1) > article p {

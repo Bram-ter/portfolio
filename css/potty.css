@@ -153,8 +153,20 @@ header, main {
     margin-top: 2em;
 }
 
-.pottypage main > section:last-of-type img {
-    width: 100%;
+.pottypage main > section:last-of-type div {
+    margin-top: 3em;
+}
+
+.pottypage main > section:last-of-type div img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+.pottypage main > section:last-of-type div p {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1em;
 }
 
 @media (min-width: 40em) { 
@@ -204,7 +216,11 @@ header, main {
         margin-top: 0em;
     }
 
-    .pottypage main > section:last-of-type img {
+    .pottypage main > section:last-of-type div {
         width: 50%;
+    }
+
+    .pottypage main > section:last-of-type div img {
+        width: 80%;
     }
 }

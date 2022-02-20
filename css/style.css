@@ -39,7 +39,7 @@ section .button button {
 }
 
 .button {
-    width: 100%;
+    width: auto;
     margin-left: 0.3rem;
     margin-top: 1.3rem;
     max-height: 50px;
@@ -142,30 +142,41 @@ button:hover span:nth-child(4) {
 .landingpage {
     height: 100vh;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     color: #2E20CA;
 }
 
 .landingpage header {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     background-color: #FDF7FF;
-    flex: 50%;
+    flex: 60%;
 }
 
-.landingpage canvas {
+.landingpage > figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.landingpage > figure > img {
+    width: 70%;
 }
 
 .landingpage header section {
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
-    width: 70%;
-    margin-left: 5em;
+    width: 90%;
     font-weight: 100;
+}
+
+.landingpage header section > div {
+    display: flex;
 }
 
 .landingpage h1 {
@@ -176,7 +187,7 @@ button:hover span:nth-child(4) {
 
 .landingpage h2 {
     opacity: 0;
-    font-size: 3rem;
+    font-size: 2.5rem;
     width: 90%;
     margin-top: 0.5vh;
     font-weight: 100;
@@ -237,7 +248,8 @@ button:hover span:nth-child(4) {
 
 .workpage div > article {
     flex: 60%;
-    margin: 0px;
+    margin-top: 3em;
+    margin-bottom: 3em;
     position: relative;
 }
 
@@ -264,20 +276,37 @@ button:hover span:nth-child(4) {
 
 .workpage div > figure {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 50vh;
     padding: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
     margin: 0;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    flex: 40%;
-    background-color: #FDF7FF;
+    background-color: #FFF;
 }
 
 .workpage div > figure img { 
-    width: 40%;
-    margin-top: 2em;
+    width: 30%;
+    min-width: 13em;
 }
+
+.workpage div:nth-child(even) > article {
+    order: 1;
+}
+
+.workpage div:nth-child(even) > figure {
+    order: 2;
+}
+
+.workpage div:nth-child(odd) > article {
+    order: 1;
+}
+
+.workpage div:nth-child(odd) > figure {
+    order: 2;
+}
+
 
 .workpage div:nth-child(3) > figure { 
     background-image: url(../assets/img/illustraties_cover.jpg);
@@ -307,7 +336,37 @@ button:hover span:nth-child(4) {
     font-size: 1rem;
 }
 
-@media (min-width: 40em) { 
+@media (min-width: 50em) { 
+
+    /* Buttons */
+
+    .landingpage header section > div {
+        flex-direction: column;
+    }
+
+    /* Landing page */
+
+    .landingpage {
+        height: 100vh;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .landingpage section {
+        transform: translateX(-2em);
+    }
+
+    .landingpage header {
+        flex: 50%;
+    }
+
+    .landingpage header section {
+        width: 70%;
+    }
+
+    .landingpage > figure > img {
+        width: 80%;
+    }
 
     /* My work */
 
@@ -379,7 +438,24 @@ button:hover span:nth-child(4) {
         padding: 0;
         margin: 0;
         flex: 40%;
+        height: auto;
         background-color: #fff;
+    }
+
+    .workpage div:nth-child(even) > article {
+        order: unset;
+    }
+    
+    .workpage div:nth-child(even) > figure {
+        order: unset;
+    }
+    
+    .workpage div:nth-child(odd) > article {
+        order: unset;
+    }
+    
+    .workpage div:nth-child(odd) > figure {
+        order: unset;
     }
 
     .workpage div > figure img { 
@@ -404,6 +480,18 @@ button:hover span:nth-child(4) {
 }
 
 @media (min-width: 80em) { 
+
+    /* Buttons */
+
+    .landingpage header section > div {
+        flex-direction: row;
+    }
+
+    /* Landing page */
+
+    .landingpage h2 {
+        font-size: 3rem;
+    }
     
     /* My work */
 

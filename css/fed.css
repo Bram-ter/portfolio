@@ -276,12 +276,10 @@ header, main {
     }
 
     .fed-page main > section:last-of-type p {
-        margin-left: .5em;
         margin-top: .5em;
     }
 
     .fed-page main > section:last-of-type a {
-        width: 97%;
         margin: 0 auto;
     }
 

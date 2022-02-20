@@ -84,46 +84,104 @@ header, main {
     transform: translateX(-.3em);
 }
 
+/* Global */
+
 .rmddpage main header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 80vh;
     background-color: #FDF7FF;
 }
 
-.rmddpage main header > section {
-    margin: 0 auto;
-    width: 80%;
+.rmddpage main header > div {
+    width: 90%;
+    order: 2;
 }
 
-.rmddpage main header > section p {
-    width: 90%;
+.rmddpage main header > div p {
+    width: 80%;
     font-size: 1rem;
+}
+
+.rmddpage main header > img {
+    margin-left: 1em;
+    margin-right: auto;
+    width: 12em;
+    order: 1;
 }
 
 .rmddpage main > section {
     display: flex;
+    flex-direction: column;
+    margin-bottom: 5em;
 }
 
-.rmddpage main > section > figure,
-.rmddpage main > section > article {
+.rmddpage main > section > figure {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     flex: 50%;
+    order: 1;
+    overflow: hidden;
 }
 
-.rmddpage main > section > article p:first-child {
-    margin-top: 5em;
+.rmddpage main > section > figure:first-of-type {
+    order: 2;
 }
 
-.rmddpage main > section > article p {
+.rmddpage main > section > figure:last-of-type {
+    order: 1;
+}
+
+.rmddpage main > section > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    flex: 50%;
+    order: 2;
+}
+
+.rmddpage main > section > figure img {
+    width: 120%;
+    display: block;
+    font-size: 1rem;
+    margin-top: 2em;
+    box-shadow: #d8d8d8 1px 1px 1px 1px;
+}
+
+.rmddpage main > section > article p,
+.rmddpage main > section > article ul {
     margin: 0 auto;
     margin-top: 1em;
-    width: 80%;
+    width: 90%;
+}
+
+.rmddpage main > section > div {
+    width: 100%;
+}
+
+.rmddpage main > section > div > img {
+    width: 100%;
+}
+
+.rmddpage main > section > div > p {
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 90%;
+}
+
+.rmddpage main > section > figure > p {
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 90%;
 }
 
 .rmddpage main > section > article blockquote {
     position: relative;
+    font-style: italic;
     margin: 0 auto;
     margin-top: 1em;
     width: 75%;
@@ -144,15 +202,7 @@ header, main {
 
 .rmddpage main > section > article blockquote::after {
     bottom: -.7em;
-    margin-left: .1em;
-}
-
-.rmddpage main > section > figure img {
-    width: 100%;
-    display: block;
-    font-size: 1rem;
-    margin-top: 2em;
-    box-shadow: #d8d8d8 1px 1px 1px 1px;
+    margin-left: -.1em;
 }
 
 @media (min-width: 40em) { 
@@ -165,6 +215,42 @@ header, main {
 
     h2 {
         font-size: 2em;
+    }
+
+    .rmddpage main > section {
+        flex-direction: row;
+    }
+
+    .rmddpage main header {
+        flex-direction: row;
+    }
+
+    .rmddpage main header > img {
+        order: 2;
+        width: 15em;
+        margin: 0 auto;
+    }
+
+    .rmddpage main header > div {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .rmddpage main header > div p {
+        width: 100%;
+    }
+
+    .rmddpage main > section > figure {
+        order: unset;
+    }
+
+    .rmddpage main > section > figure:last-of-type,
+    .rmddpage main > section > figure:first-of-type {
+        order: unset;
+    }
+
+    .rmddpage main > section > article {
+        order: unset;
     }
 }
 
@@ -180,6 +266,13 @@ header, main {
         font-size: 2.5em;
     }
 
+    .rmddpage main header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+
     .rmddpage main header > section {
         justify-content: center;
         align-items: center;
@@ -193,5 +286,20 @@ header, main {
         width: 40%;
         margin: 0 auto;
         text-align: left;
+    }
+
+    .rmddpage main > section > figure img {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        font-size: 1rem;
+        margin-top: 2em;
+        box-shadow: #d8d8d8 1px 1px 1px 1px;
+    }
+
+    .rmddpage main > section > div > p {
+        margin: 0 auto;
+        margin-top: 1em;
+        width: 50%;
     }
 }
