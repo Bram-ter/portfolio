@@ -1,98 +1,87 @@
-var btn1 = document.getElementById("btn1");
-var btn2 = document.getElementById("btn2");
-var btn3 = document.getElementById("btn3");
-var btn4 = document.getElementById("btn4");
-var btn5 = document.getElementById("btn5");
-var btn6 = document.getElementById("btn6");
+const btn1 = document.getElementById("btn1");
+const btn2 = document.getElementById("btn2");
+const btn3 = document.getElementById("btn3");
+const btn4 = document.getElementById("btn4");
+const btn5 = document.getElementById("btn5");
+const btn6 = document.getElementById("btn6");
 
-var modal1 = document.getElementById("modal1");
-var modal2 = document.getElementById("modal2");
-var modal3 = document.getElementById("modal3");
-var modal4 = document.getElementById("modal4");
-var modal5 = document.getElementById("modal5");
-var modal6 = document.getElementById("modal6");
+const cross1 = document.querySelector("body main #modal1 .cross");
+const cross2 = document.querySelector("body main #modal2 .cross");
+const cross3 = document.querySelector("body main #modal3 .cross");
+const cross4 = document.querySelector("body main #modal4 .cross");
+const cross5 = document.querySelector("body main #modal5 .cross");
+const cross6 = document.querySelector("body main #modal6 .cross");
 
-function btnClick1() {
+const modal1 = document.querySelector("#modal1");
+const modal2 = document.querySelector("#modal2");
+const modal3 = document.querySelector("#modal3");
+const modal4 = document.querySelector("#modal4");
+const modal5 = document.querySelector("#modal5");
+const modal6 = document.querySelector("#modal6");
+
+/* Add block class to modal when image is clicked */
+btn1.addEventListener("click", () => {
     modal1.classList.add("block");
-}
-function btnClick2() {
+});
+
+btn2.addEventListener("click", () => {
     modal2.classList.add("block");
-}
-function btnClick3() {
+});
+
+btn3.addEventListener("click", () => {
     modal3.classList.add("block");
-}
-function btnClick4() {
+});
+
+btn3.addEventListener("click", () => {
+    modal3.classList.add("block");
+});
+
+btn4.addEventListener("click", () => {
     modal4.classList.add("block");
-}
-function btnClick5() {
+});
+
+btn5.addEventListener("click", () => {
     modal5.classList.add("block");
-}
-function btnClick6() {
+});
+
+btn6.addEventListener("click", () => {
     modal6.classList.add("block");
-}
+});
 
-btn1.addEventListener("click", btnClick1);
-btn2.addEventListener("click", btnClick2);
-btn3.addEventListener("click", btnClick3);
-btn4.addEventListener("click", btnClick4);
-btn5.addEventListener("click", btnClick5);
-btn6.addEventListener("click", btnClick6);
+/* Remove block class when cross is clicked */
 
-var cross1 = document.querySelector("body main #modal1 .cross");
-var cross2 = document.querySelector("body main #modal2 .cross");
-var cross3 = document.querySelector("body main #modal3 .cross");
-var cross4 = document.querySelector("body main #modal4 .cross");
-var cross5 = document.querySelector("body main #modal5 .cross");
-var cross6 = document.querySelector("body main #modal6 .cross");
-
-var modal1 = document.querySelector("#modal1");
-var modal2 = document.querySelector("#modal2");
-var modal3 = document.querySelector("#modal3");
-var modal4 = document.querySelector("#modal4");
-var modal5 = document.querySelector("#modal5");
-var modal6 = document.querySelector("#modal6");
-
-function crossClick1() {
+cross1.addEventListener("click", () => {
     if ( modal1.classList.contains("block") ) {
         modal1.classList.remove("block");
     }
-}
+});
 
-function crossClick2() {
+cross2.addEventListener("click", () => {
     if ( modal2.classList.contains("block") ) {
         modal2.classList.remove("block");
     }
-}
+});
 
-function crossClick3() {
+cross3.addEventListener("click", () => {
     if ( modal3.classList.contains("block") ) {
         modal3.classList.remove("block");
     }
-}
+});
 
-function crossClick4() {
+cross4.addEventListener("click", () => {
     if ( modal4.classList.contains("block") ) {
         modal4.classList.remove("block");
     }
-}
+});
 
-function crossClick5() {
+cross5.addEventListener("click", () => {
     if ( modal5.classList.contains("block") ) {
         modal5.classList.remove("block");
     }
-}
+});
 
-function crossClick6() {
+cross6.addEventListener("click", () => {
     if ( modal6.classList.contains("block") ) {
         modal6.classList.remove("block");
     }
-}
-
-cross1.addEventListener("click", crossClick1);
-cross2.addEventListener("click", crossClick2);
-cross3.addEventListener("click", crossClick3);
-cross4.addEventListener("click", crossClick4);
-cross5.addEventListener("click", crossClick5);
-cross6.addEventListener("click", crossClick6);
-
-
+});
