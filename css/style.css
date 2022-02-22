@@ -223,6 +223,10 @@ button:hover span:nth-child(4) {
     margin-right: .2em;
     font-size: 2em;
     transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
 }
 
 .workpage main > a:nth-child(1):hover::before {
@@ -383,13 +387,6 @@ button:hover span:nth-child(4) {
         transition: 1s;
     }
 
-    .workpage main > a:nth-child(1)::before {
-        content: '👈';
-        margin-right: .2em;
-        font-size: 2em;
-        transition: .3s;
-    }
-
     .workpage main > a:nth-child(1):hover::before {
         transform: translateX(-.3em);
     }
@@ -506,13 +503,6 @@ button:hover span:nth-child(4) {
         text-decoration: none;
         color: #2E20CA;
         transition: 1s;
-    }
-
-    .workpage main > a:nth-child(1)::before {
-        content: '👈';
-        margin-right: .2em;
-        font-size: 2em;
-        transition: .3s;
     }
 
     .workpage main > a:nth-child(1):hover::before {
