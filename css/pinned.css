@@ -1,34 +1,4 @@
-/* Fonts */
-
-@font-face {
-    font-family: "roboto-medium";
-    src: url("/assets/fonts/Roboto/Roboto-Medium.ttf") format("ttf")
-}
-@font-face {
-    font-family: "roboto-regular";
-    src: url("/assets/fonts/Roboto/Roboto-Regular.ttf") format("ttf")
-  }
-
-/* Keyframes */
-
-@keyframes ballSlideDown {
-    0% {
-        transform: translate(0, 0);
-        opacity: 0;
-    }
-    40% {
-        opacity: 1;
-    }
-    80% {
-        transform: translate(0, 20px);
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-/* global */
+/* Global */
 
 html {
     scroll-behavior: smooth;
@@ -136,8 +106,22 @@ header, main {
     box-sizing: border-box;
 }
 
+.pinnedpage div:nth-child(2) > a > span:hover {
+    border: 2px solid #655dbd;
+}
+
+.pinnedpage div:nth-child(2) > a:hover > span::before {
+    animation-play-state: paused;
+}
+
+
+
 .pinnedpage div:nth-child(2) > a:visited {
     color: #2E20CA;
+}
+
+.pinnedpage div:nth-child(2) > a:hover {
+    color: #655dbd;
 }
 
 .pinnedpage div:nth-child(2) > header {
