@@ -24,13 +24,11 @@ h1, h2, p, a {
 }
 
 h1 {
-    font-family: "roboto-medium";
     font-weight: 500;
     font-size: 3.5em;
 }
 
 h2 {
-    font-family: "roboto-medium";
     font-weight: 500;
     font-size: 2em;
 }
@@ -109,13 +107,14 @@ header, main {
 .fed-page main > section > article a {
     margin: 0 auto;
     margin-top: 1em;
-    width: 80%;
+    width: 90%;
 }
 
 .fed-page main > section > article ul {
     margin: 0 auto;
     margin-top: 1em;
-    width: 80%;
+    padding-left: 1em;
+    width: 90%;
 }
 
 .fed-page main > section > article ul > li:not(:first-of-type) {
@@ -134,6 +133,10 @@ header, main {
     line-height: 1.5;
     margin-left: .2em;
     transition: .3s;
+}
+
+.fed-page main > section:last-of-type a:visited {
+    color: #2E20CA;
 }
 
 .fed-page main > section > article > a:hover::after {
@@ -163,19 +166,13 @@ header, main {
 }
 
 .fed-page main > section:last-of-type p {
-    width: 90%;
-    margin: 0 auto;
+    width: 95%;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
 .fed-page main > section:last-of-type a {
     width: 90%;
-    margin: 0 auto;
-}
-
-.fed-page main > section:last-of-type a {
-    margin-top: 1em;
 }
 
 .fed-page main > section:last-of-type a::after {
@@ -195,6 +192,7 @@ header, main {
     flex-direction: column;
     margin-top: 2em;
     margin-bottom: 2em;
+    margin-left: 1em;
 }
 
 @media (min-width: 40em) { 
@@ -216,6 +214,17 @@ header, main {
 
     .fed-page main > section:last-of-type img {
         width: 80%;
+    }
+
+    .fed-page main > section > article ul { 
+        padding: inherit;
+    }
+
+    .fed-page main > section:last-of-type div:nth-child(2) { 
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
     }
 }
 
@@ -268,11 +277,8 @@ header, main {
         margin-top: .5em;
     }
 
-    .fed-page main > section:last-of-type a {
-        margin: 0 auto;
-    }
-
     .fed-page main > section:last-of-type div:nth-child(2) {
         justify-content: flex-start;
+        margin-left: 1em;
     }
 }

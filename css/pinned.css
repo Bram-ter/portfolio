@@ -16,13 +16,11 @@ h1, h2, p, a {
 }
 
 h1 {
-    font-family: "roboto-medium";
     font-weight: 500;
     font-size: 3.5em;
 }
 
 h2 {
-    font-family: "roboto-medium";
     font-weight: 500;
     font-size: 2em;
 }
@@ -113,8 +111,6 @@ header, main {
 .pinnedpage div:nth-child(2) > a:hover > span::before {
     animation-play-state: paused;
 }
-
-
 
 .pinnedpage div:nth-child(2) > a:visited {
     color: #2E20CA;

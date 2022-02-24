@@ -24,13 +24,11 @@ h1, h2, p, a {
 }
 
 h1 {
-    font-family: "roboto-medium";
     font-weight: 500;
     font-size: 3.5em;
 }
 
 h2 {
-    font-family: "roboto-medium";
     font-weight: 500;
     font-size: 2em;
 }
@@ -95,9 +93,9 @@ header, main {
 }
 
 .rmddpage main header > img {
-    margin-left: 1em;
+    margin: 1em;
     margin-right: auto;
-    width: 12em;
+    width: 10em;
     order: 1;
 }
 
