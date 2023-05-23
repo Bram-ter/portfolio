@@ -1,0 +1,295 @@
+/* Global */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2E20CA;
+}
+
+body {
+    font-family: "roboto-regular";
+    padding: 0;
+    margin: 0 auto;
+}
+
+.block {
+    display: block !important;
+}
+
+h1, h2, p, a {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 3.5em;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 2em;
+}
+
+header, main {
+    width: 100%;
+    position: relative;
+}
+
+.rmddpage {
+    color: #2E20CA;
+}
+
+/* Headerbutton */
+
+.rmddpage main {
+    position: relative;
+}
+
+.rmddpage main > a:nth-child(1) {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    text-decoration: none;
+    color: #2E20CA;
+    transition: 1s;
+}
+
+.rmddpage main > a:nth-child(1)::before {
+    content: '👈';
+    margin-right: .2em;
+    font-size: 2em;
+    transition: .3s;
+}
+
+.rmddpage main > a:nth-child(1):hover::before {
+    transform: translateX(-.3em);
+}
+
+/* Global */
+
+.rmddpage main header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #FDF7FF;
+}
+
+.rmddpage main header > div {
+    width: 90%;
+    order: 2;
+}
+
+.rmddpage main header > div p {
+    width: 80%;
+    font-size: 1rem;
+}
+
+.rmddpage main header > img {
+    margin: 1em;
+    margin-right: auto;
+    width: 13em;
+    order: 1;
+}
+
+.rmddpage main > section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5em;
+}
+
+.rmddpage main > section > figure {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    flex: 70%;
+    order: 1;
+    overflow: hidden;
+}
+
+.rmddpage main > section > figure:first-of-type {
+    order: 2;
+}
+
+.rmddpage main > section > figure:last-of-type {
+    order: 1;
+}
+
+.rmddpage main > section > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    flex: 50%;
+    order: 2;
+}
+
+.rmddpage main > section:nth-child(4) > article { 
+    width: 30%;
+}
+
+.rmddpage main > section > figure img {
+    width: 120%;
+    display: block;
+    font-size: 1rem;
+    margin-top: 2em;
+    box-shadow: #d8d8d8 1px 1px 1px 1px;
+}
+
+.rmddpage main > section > article p,
+.rmddpage main > section > article ul {
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 90%;
+}
+
+.rmddpage main > section > div {
+    width: 100%;
+}
+
+.rmddpage main > section > div > img {
+    width: 100%;
+}
+
+.rmddpage main > section > div > p {
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 90%;
+}
+
+.rmddpage main > section > figure > p {
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 90%;
+}
+
+.rmddpage main > section > article blockquote {
+    position: relative;
+    font-style: italic;
+    margin: 0 auto;
+    margin-top: 1em;
+    width: 75%;
+}
+
+.rmddpage main > section > article blockquote::before,
+.rmddpage main > section > article blockquote::after {
+    position: absolute;
+    content: '\0022	';
+    font-size: 3em;
+    color: #2E20CA;
+}
+
+.rmddpage main > section > article blockquote::before {
+    top: -.2em;
+    left: -.5em;
+}
+
+.rmddpage main > section > article blockquote::after {
+    bottom: -.7em;
+    margin-left: -.1em;
+}
+
+@media (min-width: 40em) { 
+
+    /* Global */
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .rmddpage main > section {
+        flex-direction: row;
+    }
+
+    .rmddpage main header {
+        flex-direction: row;
+    }
+
+    .rmddpage main header > img {
+        order: 2;
+        width: 15em;
+    }
+
+    .rmddpage main header > div {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .rmddpage main header > div p {
+        width: 100%;
+    }
+
+    .rmddpage main > section > figure {
+        order: unset;
+    }
+
+    .rmddpage main > section > figure:last-of-type,
+    .rmddpage main > section > figure:first-of-type {
+        order: unset;
+    }
+
+    .rmddpage main > section > article {
+        order: unset;
+    }
+}
+
+@media (min-width: 70em) { 
+
+    /* Global */
+
+    h1 {
+        font-size: 4em;
+    }
+    
+    h2 {
+        font-size: 2.5em;
+    }
+
+    .rmddpage main header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+
+    .rmddpage main header > section {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .rmddpage main header > section h1,
+    .rmddpage main header > section p {
+        width: 40%;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .rmddpage main > section > figure img {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
+        font-size: 1rem;
+        margin-top: 2em;
+        box-shadow: #d8d8d8 1px 1px 1px 1px;
+    }
+
+    .rmddpage main > section > div > p {
+        margin: 0 auto;
+        margin-top: 1em;
+        width: 50%;
+    }
+}

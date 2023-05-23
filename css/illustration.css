@@ -1,0 +1,398 @@
+/* Global */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #2E20CA;
+}
+
+body {
+    font-family: "roboto-regular";
+    padding: 0;
+    margin: 0 auto;
+}
+
+.block {
+    display: block !important;
+}
+
+h1, h2, p, a {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 3.5em;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 2em;
+}
+
+header, main {
+    width: 100%;
+    position: relative;
+}
+
+.illustrationpage {
+    color: #2E20CA;
+}
+
+/* Headerbutton */
+
+.illustrationpage main {
+    position: relative;
+}
+
+.illustrationpage main > a:nth-child(1) {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    text-decoration: none;
+    color: #2E20CA;
+    transition: 1s;
+}
+
+.illustrationpage main > a:nth-child(1)::before {
+    content: '👈';
+    margin-right: .2em;
+    font-size: 2em;
+    transition: .3s;
+}
+
+.illustrationpage main > a:nth-child(1):hover::before {
+    transform: translateX(-.3em);
+}
+
+.illustrationpage main header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #FDF7FF;
+}
+
+.illustrationpage main header > section {
+    margin-left: 2em;
+}
+
+.illustrationpage main header > section p {
+    width: 90%;
+    font-size: 1rem;
+}
+
+.illustrationpage main .modal {
+    position: fixed;
+    overflow: scroll;
+    display: none;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    z-index: 9999;
+    background-color: #FDF7FF;
+    box-shadow: #d8d8d8 1px 1px 1px 1px;
+}
+
+.illustrationpage main .modal img {
+    float: left;
+    margin-left: 1.4em;
+}
+
+.illustrationpage main .modal p {
+    float: left;
+}
+
+.illustrationpage main .modal h2 {
+    margin: .6em;
+}
+
+.illustrationpage main .modal:nth-child(4) img:nth-child(2),
+.illustrationpage main .modal:nth-child(5) img:nth-child(2),
+.illustrationpage main .modal:nth-child(5) img:nth-child(3),
+.illustrationpage main .modal:nth-child(6) img:nth-child(2),
+.illustrationpage main .modal:nth-child(6) img:nth-child(3),
+.illustrationpage main .modal:nth-child(7) img,
+.illustrationpage main .modal:nth-child(8) img:nth-child(2),
+.illustrationpage main .modal:nth-child(8) img:nth-child(3),
+.illustrationpage main .modal:nth-child(9) img:nth-child(2),
+.illustrationpage main .modal:nth-child(9) img:nth-child(3)    {
+    width: 88%;
+}
+
+.illustrationpage main .modal:nth-child(4) p,
+.illustrationpage main .modal:nth-child(5) p,
+.illustrationpage main .modal:nth-child(6) p,
+.illustrationpage main .modal:nth-child(7) p,
+.illustrationpage main .modal:nth-child(9) p  {
+    width: 90%;
+    margin-top: 1em;
+    margin-left: 1.5em;
+}
+
+.illustrationpage main .modal:nth-child(5) p {
+    margin-left: 2em;
+    padding-bottom: 2em;
+}
+
+.illustrationpage main .modal:nth-child(6) p {
+    margin-left: 1.6em;
+    padding-bottom: 2em;
+}
+
+.illustrationpage main .modal:nth-child(7) p {
+    margin-left: 1.6em;
+    padding-bottom: 2em;
+}
+
+.illustrationpage main .modal:nth-child(9) p {
+    margin-left: 1.6em;
+    padding-bottom: 2em;
+}
+
+.illustrationpage main .modal:nth-child(8) div:first-of-type {
+    position: relative;
+    float: left;
+    width: 88%;
+    margin: 1em;
+    margin-left: 1.6em;
+    padding-bottom: 2em;
+}
+
+.illustrationpage main .modal:nth-child(8) div > a::after {
+    position: absolute;
+    content: '👉';
+    margin-left: .3em;
+    transition: .3s;
+}
+
+.illustrationpage main .modal:nth-child(8) div > a:hover::after {
+    transform: translateX(.3em);
+}
+
+.illustrationpage main .modal .cross {
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+    cursor: pointer;
+    height: 3em;
+    width: 3em;
+    cursor: pointer;
+}
+
+.illustrationpage main .modal .cross span:first-of-type,
+.illustrationpage main .modal .cross span:last-of-type {
+    position: absolute;
+    background-color: #2E20CA;
+    width: 100%;
+    height: .5em;
+}
+
+.illustrationpage main .modal .cross span:first-of-type {
+    top: 40%;
+    transform: rotate(45deg);
+}
+
+.illustrationpage main .modal .cross span:last-of-type {
+    top: 40%;
+    transform: rotate(-45deg);
+}
+
+.illustrationpage main > section {
+    display: flex;
+    flex-direction: column;
+}
+
+.illustrationpage main section .wrapper {
+    width: 100%;
+    /* height: fit-content; */
+    height: 100%;
+    min-height: 0;
+}
+
+.illustrationpage main section .wrapper:last-of-type figure:nth-child(1) {
+    margin-top: 0;
+}
+
+.illustrationpage main .wrapper > figure {
+    box-shadow: #d8d8d8 1px 1px 1px 1px;
+    cursor: pointer;
+}
+
+.illustrationpage main .wrapper > figure img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+@media (min-width: 40em) { 
+
+    /* Global */
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .illustrationpage main > section {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .illustrationpage main section .wrapper {
+        width: 40%;
+        height: 100%;
+        min-height: 0;
+    }
+
+    .illustrationpage main section .wrapper:last-of-type figure:nth-child(1) {
+        margin-top: 1em;
+    }
+
+    .illustrationpage main .modal img {
+        margin-left: 1.6em;
+    }
+
+    /* Modal */
+
+    .illustrationpage main .modal:nth-child(4) img:nth-child(2) {
+        width: 50%;
+    }
+
+    .illustrationpage main .modal:nth-child(5) img:nth-child(2) {
+        width: 35%;
+    }
+    
+    .illustrationpage main .modal:nth-child(5) img:nth-child(3) {
+        width: 55%;
+    }
+
+    .illustrationpage main .modal:nth-child(7) img {
+        width: 29%;
+    }
+    
+    .illustrationpage main .modal:nth-child(8) img:nth-child(2) {
+        width: 28%;
+    }
+    
+    .illustrationpage main .modal:nth-child(8) img:nth-child(3) {
+        width: 50%;
+    }
+    
+    .illustrationpage main .modal:nth-child(9) img:nth-child(2) {
+        width: 49%;
+    }
+    
+    .illustrationpage main .modal:nth-child(9) img:nth-child(3) {
+        width: 44%;
+    }
+
+    .illustrationpage main .modal:nth-child(4) p,
+    .illustrationpage main .modal:nth-child(7) p {
+        width: 30%;
+    }
+
+    .illustrationpage main .modal:nth-child(5) p {
+        width: 50%;
+    }
+
+    .illustrationpage main .modal:nth-child(6) p {
+        width: 50%;
+    }
+
+    .illustrationpage main .modal:nth-child(9) p {
+        width: 45%;
+    }
+
+    .illustrationpage main .modal:nth-child(8) div:first-of-type {
+        width: 40%;
+    }
+}
+
+@media (min-width: 70em) { 
+
+    /* Global */
+
+    h1 {
+        font-size: 4em;
+    }
+    
+    h2 {
+        font-size: 2.5em;
+    }
+
+    .illustrationpage main header {
+        height: 60vh;
+    }
+
+    /* Modal */
+
+    .illustrationpage main .modal:nth-child(4) img:nth-child(2) {
+        width: 37%;
+    }
+    
+    .illustrationpage main .modal:nth-child(5) img:nth-child(3) {
+        width: 50%;
+    }
+
+    .illustrationpage main .modal:nth-child(5) img:nth-child(2),
+    .illustrationpage main .modal:nth-child(7) img {
+        width: 29%;
+    }
+
+    .illustrationpage main .modal:nth-child(6) img:nth-child(2),
+    .illustrationpage main .modal:nth-child(6) img:nth-child(3) {
+        width: 46%;
+    }
+    
+    .illustrationpage main .modal:nth-child(8) img:nth-child(2) {
+        width: 28%;
+    }
+    
+    .illustrationpage main .modal:nth-child(8) img:nth-child(3) {
+        width: 49%;
+    }
+    
+    .illustrationpage main .modal:nth-child(9) img:nth-child(2) {
+        width: 49%;
+    }
+    
+    .illustrationpage main .modal:nth-child(9) img:nth-child(3) {
+        width: 44%;
+    }
+
+    .illustrationpage main .modal:nth-child(4) p,
+    .illustrationpage main .modal:nth-child(7) p {
+        width: 30%;
+    }
+
+    .illustrationpage main .modal:nth-child(5) p {
+        width: 40%;
+    }
+
+    .illustrationpage main .modal:nth-child(6) p{
+        width: 50%;
+    }
+
+    .illustrationpage main .modal:nth-child(8) div:first-of-type {
+        width: 50%;
+    }
+
+    .illustrationpage main .modal:nth-child(8) div:first-of-type {
+        padding-bottom: 0px;
+    }
+
+    .illustrationpage main .modal:nth-child(9) p {
+        width: 45%;
+    }
+}
