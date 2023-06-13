@@ -42,6 +42,14 @@ header, main {
     color: #2E20CA;
 }
 
+.fed-page p{
+    font-size: 1.2em;
+}
+
+.fed-page li {
+    font-size: 1.1em;
+}
+
 /* Headerbutton */
 
 .fed-page main {
@@ -86,7 +94,6 @@ header, main {
 
 .fed-page main header > section p {
     width: 80%;
-    font-size: 1rem;
 }
 
 .fed-page main > section,
@@ -123,7 +130,7 @@ header, main {
 
 .fed-page main > section > article a {
     margin-top: 1em;
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-decoration: none;
 }
 
@@ -152,7 +159,7 @@ header, main {
 .fed-page main > section > figure img {
     width: 100%;
     display: block;
-    font-size: 1rem;
+    font-size: 1em;
     margin-top: 2em;
 }
 
@@ -173,6 +180,7 @@ header, main {
 
 .fed-page main > section:last-of-type a {
     width: 90%;
+    font-size: 1.2em;
 }
 
 .fed-page main > section:last-of-type a::after {
@@ -256,7 +264,7 @@ header, main {
     }
 
     .fed-page main header > section p {
-        font-size: 1rem;
+        font-size: 1em;
     }
 
     .fed-page main > section {

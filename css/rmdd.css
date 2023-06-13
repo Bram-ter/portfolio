@@ -42,6 +42,14 @@ header, main {
     color: #2E20CA;
 }
 
+.rmddpage p {
+    font-size: 1.2em;
+}
+
+.rmddpage li {
+    font-size: 1.1em;
+}
+
 /* Headerbutton */
 
 .rmddpage main {
@@ -89,7 +97,6 @@ header, main {
 
 .rmddpage main header > div p {
     width: 80%;
-    font-size: 1rem;
 }
 
 .rmddpage main header > img {
@@ -174,6 +181,7 @@ header, main {
     position: relative;
     font-style: italic;
     margin: 0 auto;
+    font-size: 1.2em;
     margin-top: 1em;
     width: 75%;
 }

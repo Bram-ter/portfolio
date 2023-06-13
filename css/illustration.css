@@ -85,7 +85,7 @@ header, main {
 
 .illustrationpage main header > section p {
     width: 90%;
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 .illustrationpage main .modal {
