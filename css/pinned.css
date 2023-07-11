@@ -35,29 +35,6 @@ header, main {
     color: #2E20CA;
 }
 
-.pinnedpage main > a:nth-child(1) {
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 1em;
-    left: 1em;
-    text-decoration: none;
-    color: #2E20CA;
-    transition: 1s;
-}
-
-.pinnedpage main > a:nth-child(1)::before {
-    content: '👈';
-    margin-right: .2em;
-    font-size: 2em;
-    transition: .3s;
-}
-
-.pinnedpage main > a:nth-child(1):hover::before {
-    transform: translateX(-.3em);
-}
-
 .pinnedpage p {
     font-size: 1em;
 }

@@ -52,29 +52,6 @@ header, main {
     position: relative;
 }
 
-.pottypage main > a:nth-child(1) {
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 1em;
-    left: 1em;
-    text-decoration: none;
-    color: #2E20CA;
-    transition: 1s;
-}
-
-.pottypage main > a:nth-child(1)::before {
-    content: '👈';
-    margin-right: .2em;
-    font-size: 2em;
-    transition: .3s;
-}
-
-.pottypage main > a:nth-child(1):hover::before {
-    transform: translateX(-.3em);
-}
-
 .pottypage main header {
     display: flex;
     justify-content: center;
@@ -140,8 +117,12 @@ header, main {
     flex: 50%;
 }
 
+.pottypage main > section > figure {
+    overflow: hidden;
+}
+
 .pottypage main > section > figure img {
-    width: 100%;
+    width: 200%;
     display: block;
     font-size: 1em;
     margin-top: 2em;
@@ -173,6 +154,10 @@ header, main {
 
     h2 {
         font-size: 2em;
+    }
+
+    .pottypage main > section > figure img {
+        width: 120%;
     }
 }
 

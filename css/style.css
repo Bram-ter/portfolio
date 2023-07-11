@@ -192,7 +192,7 @@ button:hover span:nth-child(4) {
 .landingpage header section {
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: 90%;
     font-weight: 100;
 }
 
@@ -227,33 +227,6 @@ button:hover span:nth-child(4) {
 
 .workpage main {
     position: relative;
-}
-
-.workpage main > a:nth-child(1) {
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 1em;
-    left: 1em;
-    text-decoration: none;
-    color: #2E20CA;
-    transition: 1s;
-}
-
-.workpage main > a:nth-child(1)::before {
-    content: '👈';
-    margin-right: .2em;
-    font-size: 2em;
-    transition: .3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: inherit;
-}
-
-.workpage main > a:nth-child(1):hover::before {
-    transform: translateX(-.3em);
 }
 
 .workpage div {
